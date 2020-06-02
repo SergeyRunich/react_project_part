@@ -1,0 +1,47 @@
+@import "src/styles/placeholders";
+
+.league-menu__item--extended {
+  width: 180px;
+  height: 40px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+  border-radius: 15px;
+  border: 3px solid transparent;
+  
+  cursor: pointer;
+  text-decoration: none;
+  color: $grey5;
+  
+  &:hover {
+    border-color: $grey3;
+  }
+  
+  &.is-active {
+    border-color: $green;
+    
+    .item-name {
+      color: $black;
+    }
+  }
+  
+  .item-logo {
+    width: 20px;
+    height: 20px;
+    
+    object-fit: contain;
+    margin: 10px;
+  }
+  
+  .item-name {
+    @extend %default-font-style;
+    
+    font-size: 10px;
+    font-weight: 600;
+    color: $grey5;
+    max-width: 130px;
+  }
+}

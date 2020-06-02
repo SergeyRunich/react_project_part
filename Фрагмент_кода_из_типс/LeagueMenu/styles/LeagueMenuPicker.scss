@@ -1,0 +1,73 @@
+@import "src/styles/placeholders";
+
+.league-menu-picker-wrap {
+  background-color: $white;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+.league-menu-picker {
+  margin: 0 auto;
+  max-width: 1185px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  &__items {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    padding: 5px 10px 5px 10px;
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+  }
+  &__show-more-btn {
+    @extend %default-font-style;
+    align-items: center;
+    background-color: $white;
+    border-radius: 15px;
+    border: solid 2px $grey8;
+    color: $grey8;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 4px 6px;
+    padding-left: 12px;
+    margin-left: 10px;
+    height: 28px;
+    min-width: 115px;
+    text-transform: uppercase;
+    span {
+      margin: 0 auto;
+      padding-right: 8px;
+    }
+    img {
+      width: auto;
+      height: 10px;
+    }
+    &:hover {
+      border: 2px solid $gray23;
+    }
+  }
+}
+
+@media #{$tabletDesktop} {
+  .league-menu-picker {
+    padding: 0 10px;
+    &__items {
+      flex-grow: 1;
+    }
+  }
+}
+
+.scroll-box {
+  &__margin {
+    margin-left: 5px;
+  }
+}
